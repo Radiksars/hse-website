@@ -14,6 +14,12 @@ window.onload = function () {
         })
     });
 
+    // ВАЖНО: принудительное обновление карты
+    setTimeout(() => {
+        map.updateSize();
+    }, 100);
+
+
     // ===== ЧАТ =====
     const chatBox = document.getElementById("chatBox");
     const input = document.getElementById("messageInput");
@@ -30,8 +36,8 @@ window.onload = function () {
     function botReply(message) {
         let responses = ["Интересно!", "Расскажи подробнее", "Я понял", "Хорошо"];
 
-        if (message.includes("привет")) return "Привет!";
-        if (message.includes("как дела")) return "Отлично 😎";
+        if (message.toLowerCase().includes("привет")) return "Привет!";
+        if (message.toLowerCase().includes("как дела")) return "Отлично 😎";
 
         return responses[Math.floor(Math.random() * responses.length)];
     }
@@ -46,7 +52,6 @@ window.onload = function () {
         input.value = "";
     };
 
-    // ===== ГОЛОС (просто имитация) =====
     voiceBtn.onclick = function () {
         addMessage("🎤 Голосовое сообщение (имитация)");
         addMessage("Я получил голосовое сообщение!", "Бот");
