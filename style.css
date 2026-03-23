@@ -4,48 +4,84 @@ body {
     background-color: #f5f5f5;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* элементный селектор */
+h1 {
+    text-transform: uppercase;
 }
 
+/* класс */
+.card {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* id */
+#footer {
+    font-size: 14px;
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+}
+
+/* псевдокласс */
+nav a:hover {
+    color: yellow;
+}
+
+/* псевдоэлемент */
+p::first-letter {
+    font-size: 24px;
+    color: red;
+}
+
+/* атрибутный селектор */
+input[type="text"] {
+    border: 2px solid blue;
+}
+
+/* комбинация */
+section.card p {
+    color: #333;
+}
+
+/* flexbox */
 nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     background-color: #34495e;
     padding: 10px;
-    text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* списки */
+ul {
+    list-style-type: square;
 }
 
-main {
-    padding: 20px;
-}
-
-section {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-}
-
-img {
-    border-radius: 10px;
-}
-
+/* position */
 footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
+
+/* media */
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* important */
+h2 {
+    color: green !important;
 }

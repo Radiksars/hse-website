@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Я - студент ВШЭ</title>
+
+    <!-- внешний CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- внутренние стили -->
+    <style>
+        h2 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Я - студент ВШЭ</h1>
+    <h1 style="color: red;">Я - студент ВШЭ</h1>
 </header>
 
 <nav>
@@ -17,12 +30,12 @@
 </nav>
 
 <main>
-    <section>
+    <section class="card">
         <h2>Обо мне</h2>
         <p>Я студент Высшей школы экономики. Изучаю веб-программирование и современные технологии.</p>
     </section>
 
-    <section>
+    <section class="card">
         <h2>Мои интересы</h2>
         <ul>
             <li>Программирование</li>
@@ -31,13 +44,13 @@
         </ul>
     </section>
 
-    <section>
+    <section class="card">
         <h2>Моё фото</h2>
         <img src="images/eye.jpg" alt="Мое фото" width="300">
     </section>
 </main>
 
-<footer>
+<footer id="footer">
     <p>&copy; 2026 Студент ВШЭ</p>
 </footer>
 
