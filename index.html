@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Я - студент ВШЭ</title>
-
-    <!-- внешний CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- внутренние стили -->
-    <style>
-        h2 {
-            color: darkblue;
-        }
-
-        p {
-            font-size: 18px;
-        }
-    </style>
+    <!-- OpenLayers -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/ol.js"></script>
 </head>
 <body>
 
 <header>
-    <h1 style="color: red;">Я - студент ВШЭ</h1>
+    <h1>Я - студент ВШЭ</h1>
 </header>
 
 <nav>
@@ -30,29 +21,30 @@
 </nav>
 
 <main>
+
+    <!-- КАРТА -->
     <section class="card">
-        <h2>Обо мне</h2>
-        <p>Я студент Высшей школы экономики. Изучаю веб-программирование и современные технологии.</p>
+        <h2>Моя карта</h2>
+        <div id="map" style="width:100%; height:300px;"></div>
     </section>
 
+    <!-- ЧАТ -->
     <section class="card">
-        <h2>Мои интересы</h2>
-        <ul>
-            <li>Программирование</li>
-            <li>Веб-разработка</li>
-            <li>Дизайн интерфейсов</li>
-        </ul>
+        <h2>Чат</h2>
+
+        <div id="chatBox" style="height:200px; overflow:auto; border:1px solid #ccc;"></div>
+
+        <input type="text" id="messageInput" placeholder="Введите сообщение">
+        <button id="sendBtn">Отправить</button>
+        <button id="voiceBtn">🎤 Голос</button>
     </section>
 
-    <section class="card">
-        <h2>Моё фото</h2>
-        <img src="images/eye.jpg" alt="Мое фото" width="300">
-    </section>
 </main>
 
-<footer id="footer">
-    <p>&copy; 2026 Студент ВШЭ</p>
+<footer>
+    <p>&copy; 2026</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
